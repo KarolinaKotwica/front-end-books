@@ -63,17 +63,17 @@ function Provider({ children }) {
     setBooks(updatedBooks);
   };
 
-  useEffect(() => {
-    fetchBooks()
-  }, [createBook])
+  // useEffect(() => {
+  //   fetchBooks()
+  // }, [createBook])
 
-  useEffect(() => {
-    fetchBooks()
-  }, [deleteBookById])
+  // useEffect(() => {
+  //   fetchBooks()
+  // }, [deleteBookById])
 
-  useEffect(() => {
-    fetchBooks()
-  }, [editBookById])
+  // useEffect(() => {
+  //   fetchBooks()
+  // }, [editBookById])
 
   const valueToShare = {
     books,
