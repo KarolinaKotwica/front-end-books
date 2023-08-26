@@ -4,7 +4,7 @@ import useBooksContext from './hooks/use-books-context';
 function BookList() {
     const { books } = useBooksContext()
 
-    const renderedBooks = books.map(book => {
+    const renderedBooks = Array.isArray(books) ? books.map(book => {
         return <BookShow book={book} key={book.id}/>
     })
 
