@@ -7,7 +7,7 @@ function BookList() {
     
 
     return <div className="book-list">
-        Array.isArray(books) ? books.map(book => {
+        books.map(book => {
             <BookShow book={book} key={book.id}/>
         })
     </div>
