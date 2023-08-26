@@ -8,6 +8,7 @@ function Provider({ children }) {
 
     const fetchBooks = async () => {
     const response = await axios.get('https://bookshelf-nodejs-mysql-c5daf88ae646.herokuapp.com/')
+    console.log(response.data)
     setBooks(response.data)
   }
 
