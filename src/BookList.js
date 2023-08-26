@@ -4,12 +4,12 @@ import useBooksContext from './hooks/use-books-context';
 function BookList() {
     const { books } = useBooksContext()
 
-    
+    const renderedBooks = books.map(book => {
+        return <BookShow book={book} key={book.id}/>
+    })
 
     return <div className="book-list">
-        books.map(book => {
-            <BookShow book={book} key={book.id}/>
-        })
+        {renderedBooks}
     </div>
 }
 
