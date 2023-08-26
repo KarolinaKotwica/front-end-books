@@ -8,8 +8,8 @@ function BookList() {
 
     return <div className="book-list">
         Array.isArray(books) ? books.map(book => {
-        return <BookShow book={book} key={book.id}/>
-    })
+            <BookShow book={book} key={book.id}/>
+        })
     </div>
 }
 
