@@ -10,8 +10,8 @@ const PromptPopup = ({book, setIsOpen}) => {
 
     const handleRemove =  async (e) => {
         const response = await axios.get('https://bookshelf-nodejs-mysql-c5daf88ae646.herokuapp.com/getPassword')
-        console.log(response.data[0])
-        if (answer === response.data) {
+        console.log(response.data[0].password)
+        if (answer === response.data.password) {
             deleteBookById(book.id)
         } else {
             setInfo("Wrong password!")
