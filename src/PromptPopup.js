@@ -9,7 +9,7 @@ const PromptPopup = ({book, setIsOpen}) => {
     const { deleteBookById } = useBooksContext();
 
     const handleRemove =  async (e) => {
-        const response = await axios.get('https://bookshelf-nodejs-mysql-c5daf88ae646.herokuapp.com/getPassword')
+        const response = await axios.get('https://bookshelf-nodejs-mysql-c5daf88ae646.herokuapp.com/verifyPassword')
         if (answer === response.data[0].password) {
             deleteBookById(book.id)
         } else {
