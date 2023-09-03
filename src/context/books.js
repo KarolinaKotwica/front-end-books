@@ -64,9 +64,9 @@ function Provider({ children }) {
     setBooks(updatedBooks);
   };
 
-  // useEffect(() => {
-  //   fetchBooks()
-  // }, [createBook])
+  useEffect(() => {
+    fetchBooks()
+  }, [createBook, deleteBookById, editBookById])
 
   // useEffect(() => {
   //   fetchBooks()
